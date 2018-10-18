@@ -1,7 +1,5 @@
- 
-# @02838581
-# Fort, Kofi
-
+#print string 4
+#print char is 11
 .text
   main:
   
@@ -14,6 +12,20 @@
     addi $a0, $a0, 2 # 2 = 50
     syscall
     addi $a0, $a0, 6 # 8 = 56
+    syscall 
+    sub $a0, $a0, 5 # 3 = 51
+    syscall 
+    addi $a0, $a0, 5 # 8 = 56
+    syscall 
+    sub $a0, $a0, 3 # 5 = 53
+    syscall 
+    addi $a0, $a0, 3 # 8 = 56
+    syscall 
+    sub $a0, $a0, 7 # 1 = 49
+    syscall 
+    
+    sub $a0, $a0, 39 # return = 10
+    syscall 
     
  #Last name Characters
     li $v0, 11
