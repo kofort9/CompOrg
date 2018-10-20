@@ -1,5 +1,7 @@
-#print string 4
-#print char is 11
+#Kofi Fort
+
+.data 
+    num: .word 0
 .text
   main:
   
@@ -7,29 +9,28 @@
     li $v0, 11
     la $a0, 64 # @ = 64
     syscall 
-    sub $a0, $a0, 16 # 0 = 48
+    li $v0, 1
+    lw $a0, num # 0
     syscall 
-    addi $a0, $a0, 2 # 2 = 50
+    addi $a0, $a0, 2 #  2
+    syscall 
+    addi $a0, $a0, 6 # 8
     syscall
-    addi $a0, $a0, 6 # 8 = 56
+    sub $a0, $a0, 5 # 3
     syscall 
-    sub $a0, $a0, 5 # 3 = 51
+    addi  $a0, $a0, 5 # 8
     syscall 
-    addi $a0, $a0, 5 # 8 = 56
+    sub $a0, $a0, 3 # 5
     syscall 
-    sub $a0, $a0, 3 # 5 = 53
+    addi $a0, $a0, 3 # 8
     syscall 
-    addi $a0, $a0, 3 # 8 = 56
+    addi $a0, $a0, 3 # 1
     syscall 
-    sub $a0, $a0, 7 # 1 = 49
-    syscall 
-    
-    sub $a0, $a0, 39 # return = 10
-    syscall 
-    
  #Last name Characters
     li $v0, 11
-    la $a0, 70 # F = 70 
+    la $a0, 10 #return
+    syscall
+    addi $a0, $a0 60 # F = 70 
     syscall
     addi $a0, $a0, 41 # o = 111
     syscall
