@@ -1,4 +1,5 @@
 #Kofi Fort
+#@02838584
 
 .data 
     num: .word 0
@@ -38,13 +39,10 @@
     syscall
     addi $a0, $a0, 2 # t = 116
     syscall
-    
     sub $a0, $a0, 72 # , = 44
     syscall
-    
     sub $a0, $a0, 12 # space = 32
     syscall 
-    
     addi $a0, $a0, 43    # K = 75
     syscall
     addi $a0, $a0, 36 # o (111)
