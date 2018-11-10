@@ -1,6 +1,6 @@
 #Kofi Fort
 #@02838584
-https://github.com/kofort9/CompOrg
+#https://github.com/kofort9/CompOrg
 
 .data 
     num: .word 0
@@ -26,7 +26,7 @@ https://github.com/kofort9/CompOrg
     syscall 
     addi $a0, $a0, 3 # 8
     syscall 
-    addi $a0, $a0, 3 # 1
+    sub  $a0, $a0, 7 # 1
     syscall 
  #Last name Characters
     li $v0, 11
